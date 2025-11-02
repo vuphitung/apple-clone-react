@@ -73,7 +73,7 @@
   .hero-section:hover img,
   .grid-item:hover img { transform: none !important; filter: none !important; }
 
-  .hero-section { min-height: auto; }
+  .hero-section { min-height: aoto; }
   .hero-content { padding-top: 12px; }
   .hero-content h2 { font-size: 40px; }
   .hero-content p { font-size: 20px; }
@@ -82,7 +82,7 @@
   .grid-content h2 { font-size: 40px; }
   .grid-content h3 { font-size: 20px; }
   .grid-content p { font-size: 18px; }
-  .slider { height: auto;}
+  .slider { height: 500px;}
   .slide-content p {  display: none; }
 }
 
