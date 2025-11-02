@@ -1,0 +1,14 @@
+/* ===== GLOBAL ===== */
+@import './styles/global.css';
+
+/* ===== HEADER ===== */
+@import './styles/header.css';
+
+/* ===== HOME CONTENT ===== */
+@import './styles/home.css';
+
+/* ===== FOOTER ===== */
+@import './styles/footer.css';
+
+/* ===== RESPONSIVE ===== */
+@import './styles/responsive.css';

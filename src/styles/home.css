@@ -1,0 +1,436 @@
+/* ===== MAIN CONTENT ===== */
+.content {
+  margin-top: 44px;
+}
+
+/* ===== HERO SECTIONS ===== */
+.hero-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  min-height: 900px;
+  overflow: hidden;
+  background: #000;
+  padding-top: 44px;
+  animation: fadeInUp 0.8s ease-out;
+  contain: layout style paint;
+}
+
+.hero-section img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  top: 0;
+  left: 0;
+  will-change: transform;
+  backface-visibility: hidden;
+  transition: transform 0.4s ease;
+  transform: translateZ(0) scale(1.01);
+}
+
+.hero-section:hover img {
+  transform: translateZ(0) scale(1.03);
+}
+
+.hero-content {
+  position: relative;
+  z-index: 10;
+  text-align: center;
+  max-width: 692px;
+  padding: 52px 20px 0;
+  margin: 0 auto;
+  animation: fadeInUp 0.8s ease-out 0.2s both;
+}
+
+.hero-content h2 {
+  font-size: 56px;
+  font-weight: 600;
+  line-height: 1.07143;
+  letter-spacing: -.005em;
+  margin-bottom: 6px;
+  animation: slideInLeft 0.6s ease-out 0.3s both;
+}
+
+.hero-content p {
+  font-size: 28px;
+  font-weight: 400;
+  line-height: 1.14286;
+  letter-spacing: .007em;
+  margin-bottom: 16px;
+  opacity: 0.92;
+  animation: fadeInUp 0.6s ease-out 0.4s both;
+}
+
+.hero-buttons {
+  display: flex;
+  gap: 16px;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  animation: scaleIn 0.6s ease-out 0.5s both;
+}
+
+.btn {
+  display: inline-block;
+  padding: 12px 22px;
+  border-radius: 980px;
+  font-size: 17px;
+  line-height: 1.17648;
+  font-weight: 400;
+  text-decoration: none;
+  cursor: pointer;
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+  border: none;
+  outline: none;
+  white-space: nowrap;
+  position: relative;
+  overflow: hidden;
+  will-change: transform;
+}
+
+.btn::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.2);
+  transform: translate(-50%, -50%);
+  transition: width 0.4s, height 0.4s;
+}
+
+.btn:hover::before {
+  width: 200px;
+  height: 200px;
+}
+
+.btn:active::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.5);
+  transform: translate(-50%, -50%);
+  animation: ripple 0.4s ease-out;
+}
+
+.btn-primary {
+  background: transparent;
+  color: #258ffa;
+  border: 1px solid #258ffa;
+  transition: background 0.2s, color 0.2s, box-shadow 0.2s;
+}
+
+.btn-primary:hover {
+  background: #258ffa;
+  color: #fff;
+  animation: glow 0.6s ease-in-out;
+}
+
+.btn-secondary {
+  background: #258ffa;
+  color: #fff;
+  border: 1px solid #258ffa;
+  transition: background 0.2s, transform 0.2s;
+}
+
+.btn-secondary:hover {
+  background: #0077ed;
+  transform: scale(1.02);
+}
+
+/* ===== COLOR VARIANTS ===== */
+.hero-iphone15 {
+  background: linear-gradient(180deg, #fef9f5 0%, #fff 100%);
+}
+
+.hero-iphone15 .hero-content h2,
+.hero-iphone15 .hero-content p {
+  color: #1d1d1f;
+}
+
+.hero-iphone15pro .hero-content {
+  color: #f5f5f7;
+}
+
+.hero-ipadpro {
+  background: #000;
+}
+
+.hero-ipadpro .hero-content {
+  color: #f5f5f7;
+}
+
+/* ===== SPACER ===== */
+.spacer {
+  height: 12px;
+  background: #000;
+}
+
+/* ===== GRID SECTIONS ===== */
+.grid-section {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+  background: #000;
+  margin: 0;
+  padding: 0;
+  margin-bottom: 20px;
+  animation: fadeInUp 0.8s ease-out 0.1s both;
+  contain: layout style paint;
+}
+
+.grid-item {
+  position: relative;
+  min-height: 800px;
+  overflow: hidden;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  background: #f5f5f7;
+  border-radius: 12px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  animation: scaleIn 0.6s ease-out both;
+}
+
+.grid-item:hover {
+  transform: scale(1.01);
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+}
+
+.grid-item img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  top: 0;
+  left: 0;
+  transition: transform 0.4s ease, filter 0.2s ease;
+  will-change: transform;
+}
+
+.grid-item:hover img {
+  transform: scale(1.02);
+  filter: brightness(1.05);
+}
+
+.grid-content {
+  position: relative;
+  z-index: 10;
+  text-align: center;
+  max-width: 500px;
+  padding: 52px 20px 0;
+  margin: 0 auto;
+  animation: fadeInUp 0.8s ease-out 0.2s both;
+}
+
+.grid-content h2 {
+  font-size: 48px;
+  font-weight: 600;
+  line-height: 1.08349;
+  letter-spacing: -.003em;
+  margin-bottom: 4px;
+  animation: slideInLeft 0.6s ease-out 0.3s both;
+}
+
+.grid-content h3 {
+  font-size: 27px;
+  font-weight: 400;
+  line-height: 1.14815;
+  letter-spacing: .007em;
+  margin-bottom: 4px;
+  animation: fadeInUp 0.6s ease-out 0.4s both;
+}
+
+.grid-content p {
+  font-size: 21px;
+  font-weight: 400;
+  line-height: 1.381;
+  letter-spacing: .011em;
+  margin-bottom: 12px;
+  animation: fadeInUp 0.6s ease-out 0.5s both;
+}
+
+.grid-buttons {
+  display: flex;
+  gap: 16px;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  animation: scaleIn 0.5s ease-out 0.6s both;
+}
+
+/* ===== SPECIFIC COLORS ===== */
+.grid-airpods {
+  background: #000;
+}
+
+.grid-airpods .grid-content h2,
+.grid-airpods .grid-content p {
+  color: #f5f5f7;
+}
+
+.grid-macbook-air {
+  background: #fbfbfd;
+}
+
+.grid-macbook-air .grid-content h2,
+.grid-macbook-air .grid-content p {
+  color: #000;
+}
+
+.grid-watch-series {
+  background: linear-gradient(180deg, #d6f4f4 0%, #e8f8f8 100%);
+}
+
+.grid-watch-series .grid-content h2,
+.grid-watch-series .grid-content h3,
+.grid-watch-series .grid-content p {
+  color: #1d1d1f;
+}
+
+.grid-watch-ultra {
+  background: #000;
+}
+
+.grid-watch-ultra .grid-content h2,
+.grid-watch-ultra .grid-content h3,
+.grid-watch-ultra .grid-content p {
+  color: #f5f5f7;
+}
+
+.grid-ipad-air {
+  background: linear-gradient(180deg, #d0e7f5 0%, #e0f1f9 100%);
+}
+
+.grid-ipad-air .grid-content h2,
+.grid-ipad-air .grid-content p {
+  color: #000;
+}
+
+.grid-macbook-pro {
+  background: #fbfbfd;
+}
+
+.grid-macbook-pro .grid-content h2,
+.grid-macbook-pro .grid-content p {
+  color: #000;
+}
+
+/* ===== SLIDER ===== */
+.slider-container {
+  background: #000;
+  padding: 20px 0 40px;
+  overflow: hidden;
+}
+
+.slider {
+  width: 100%;
+  height: 1000px;
+  position: relative;
+  overflow: hidden;
+}
+
+.slider .list {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  transition: transform 1s ease-in-out;
+  will-change: transform;
+}
+
+
+.slider .list .item {
+  flex: 0 0 100%;
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+}
+
+.slider .list img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  backface-visibility: hidden;
+  will-change: opacity;
+  transition: opacity 0.6s ease-in-out;
+}
+
+/* nội dung trong slide */
+.slide-content {
+  position: absolute;
+  bottom: 70px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 10;
+  text-align: center;
+  max-width: 1500px;
+}
+
+.slide-content p {
+  color: #f5f5f7;
+  font-size: 28px;
+  font-weight: 600;
+  margin-bottom: 20px;
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+  line-height: 1.2;
+}
+
+/* nút */
+.slide-content .btn {
+  background: rgba(245, 245, 247, 0.15);
+  backdrop-filter: blur(18px);
+  color: #f5f5f7;
+  border: 1px solid rgba(245, 245, 247, 0.25);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+  padding: 12px 26px;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.slide-content .btn:hover {
+  background: rgba(245, 245, 247, 0.3);
+  transform: scale(1.03);
+}
+
+/* ================= DOTS ================= */
+.slider .dots {
+  position: absolute;
+  bottom: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 10px;
+  z-index: 20;
+}
+
+.slider .dots li {
+  list-style: none;
+  width: 10px;
+  height: 10px;
+  background: rgba(255, 255, 255, 0.35);
+  border-radius: 50%;
+  cursor: pointer;
+  transition: width 0.35s ease, background 0.35s ease;
+}
+
+.slider .dots li.active {
+  width: 28px;
+  border-radius: 5px;
+  background: #fff;
+}
+.hero-section,
+.grid-item,
+.slider .item {
+  will-change: transform, opacity;
+  transform: translateZ(0); 
+}

@@ -1,0 +1,374 @@
+/* ===== RESPONSIVE BREAKPOINTS ===== */
+
+/* LARGE DESKTOP (1069px+) */
+@media only screen and (min-width: 1069px) {
+    .nav-container {
+        max-width: 1100px;
+    }
+
+    .nav-links {
+        gap: 38px;
+    }
+
+    .nav-links a {
+        font-size: 16px;
+    }
+}
+
+/* TABLET (735px - 1068px) */
+@media only screen and (max-width: 1068px) {
+    .menu-bar {
+        padding: 0 16px;
+    }
+
+    .nav-container {
+        padding: 0;
+    }
+
+    .hamburger {
+        display: flex;
+        margin-right: auto;
+    }
+
+    .nav-links {
+        display: none !important;
+    }
+
+    .nav-links-mobile {
+        display: block;
+    }
+
+    .logo {
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .nav-icons {
+        margin-left: 0;
+    }
+
+    body.menu-open {
+        overflow: hidden;
+    }
+
+    /* Content Scaling */
+    .hero-section {
+        min-height: 800px;
+    }
+
+    .hero-content {
+        padding-top: 40px;
+    }
+
+    .hero-content h2 {
+        font-size: 48px;
+    }
+
+    .hero-content p {
+        font-size: 24px;
+    }
+
+    .grid-item {
+        min-height: 500px;
+    }
+
+    .grid-content {
+        padding-top: 46px;
+    }
+
+    .grid-content h2 {
+        font-size: 40px;
+    }
+
+    .grid-content h3 {
+        font-size: 24px;
+    }
+
+    .grid-content p {
+        font-size: 19px;
+    }
+
+    .slider {
+        height: 800px;
+    }
+
+    .slide-content {
+        bottom: 60px;
+        max-width: 100%;
+    }
+
+    .slide-content p {
+        font-size: 20px;
+    }
+
+    /* Footer Accordion */
+    .footer-sections {
+        grid-template-columns: 1fr;
+        gap: 0;
+        padding: 0;
+        border: none;
+    }
+
+    .faq {
+        border-bottom: 1px solid #d2d2d7;
+    }
+
+    .faq .question {
+        padding: 14px 0;
+        margin: 0;
+    }
+
+    .faq .question h3 {
+        font-size: 14px;
+    }
+
+    .faq .icon {
+        display: block;
+    }
+
+    .faq.active .icon {
+        transform: rotate(180deg);
+    }
+
+    .faq .answer {
+        max-height: 0;
+        overflow: hidden;
+        opacity: 0;
+        transition: max-height 0.4s ease, opacity 0.3s ease;
+        padding: 0;
+    }
+
+    .faq.active .answer {
+        max-height: 500px;
+        opacity: 1;
+        padding-bottom: 14px;
+    }
+
+    .footer-legal {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
+
+    .footer-links {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 8px;
+    }
+
+    .footer-links span {
+        display: none;
+    }
+}
+
+/* MOBILE (375px - 734px) */
+@media only screen and (max-width: 734px) {
+
+    .hero-section img,
+    .grid-item img {
+        transform: none !important;
+        transition: none !important;
+        will-change: auto !important;
+        backface-visibility: visible !important;
+    }
+
+    /* Khi hover cũng không đổi trạng thái */
+    .hero-section:hover img,
+    .grid-item:hover img,
+    .grid-item:hover {
+        transform: none !important;
+        filter: none !important;
+        box-shadow: none !important;
+    }
+
+    /* Tắt animation xuất hiện */
+    .hero-section,
+    .grid-item,
+    .hero-content,
+    .grid-content,
+    .slide-content {
+        animation: none !important;
+        transition: none !important;
+        transform: none !important;
+        opacity: 1 !important;
+    }
+
+    .menu-bar {
+        padding: 0 14px;
+    }
+
+    .logo i {
+        font-size: 20px;
+    }
+
+    .nav-icons .item {
+        font-size: 20px;
+    }
+
+    .nav-icons {
+        gap: 24px;
+    }
+
+    /* Hero Sections */
+    .hero-section {
+        min-height: 900px;
+    }
+
+    .hero-content {
+        padding: 5px 16px 0;
+    }
+
+    .hero-content h2 {
+        font-size: 40px;
+        line-height: 1.1;
+    }
+
+    .hero-content p {
+        font-size: 21px;
+        line-height: 1.19048;
+    }
+
+    .hero-buttons {
+        gap: 12px;
+    }
+
+    .btn {
+        padding: 10px 20px;
+        font-size: 15px;
+    }
+
+    /* Grid Single Column */
+    .grid-section {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .grid-item {
+        min-height: 500px;
+    }
+
+    .grid-content {
+        padding: 40px 16px 0;
+    }
+
+    .grid-content h2 {
+        font-size: 36px;
+        line-height: 1.11111;
+    }
+
+    .grid-content h3 {
+        font-size: 21px;
+        line-height: 1.19048;
+    }
+
+    .grid-content p {
+        font-size: 17px;
+        line-height: 1.23536;
+    }
+
+    .grid-buttons {
+        gap: 12px;
+    }
+
+    /* Slider */
+    .slider {
+        height: 600px;
+    }
+
+    .slider .list .item img {
+        object-fit: cover;
+    }
+
+    .slide-content {
+        bottom: 5%;
+        transform: translateX(-50%) translateY(0);
+    }
+
+    .slide-content p {
+        font-size: 18px;
+        line-height: 1.4;
+        margin-bottom: 12px;
+        padding: 0 10px;
+        text-shadow: 0 1px 6px rgba(0, 0, 0, 0.5);
+    }
+
+    .slide-content .btn {
+        font-size: 13.5px;
+        padding: 7px 16px;
+    }
+
+    .slider .dots {
+        bottom: 10px;
+    }
+
+    .slider .dots li {
+        width: 8px;
+        height: 8px;
+    }
+
+    .slider .dots li.active {
+        width: 22px;
+    }
+
+    /* Footer */
+    .footer-container {
+        padding: 0 16px;
+    }
+
+    .faq .question {
+        padding: 12px 0;
+    }
+
+    .faq .answer ul li a {
+        font-size: 14px;
+    }
+
+    .faq.active .answer {
+        padding-bottom: 12px;
+    }
+}
+
+/* SMALL MOBILE (320px - 374px) */
+@media only screen and (max-width: 374px) {
+    .hero-content h2 {
+        font-size: 32px;
+    }
+
+    .hero-content p {
+        font-size: 19px;
+    }
+
+    .hero-buttons {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .btn {
+        width: 100%;
+        max-width: 200px;
+    }
+
+    .grid-content h2 {
+        font-size: 32px;
+    }
+
+    .grid-content h3 {
+        font-size: 19px;
+    }
+
+    .grid-content p {
+        font-size: 15px;
+    }
+
+    .grid-buttons {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .grid-buttons .btn {
+        width: 100%;
+        max-width: 200px;
+    }
+
+}
