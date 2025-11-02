@@ -45,8 +45,8 @@ function Home() {
       {/* ===== iPhone 15 Pro ===== */}
       <section className="hero-section hero-iphone15pro">
         <picture>
-          <source media="(max-width: 734px)" srcSet="images/hinh1-mobile.jpeg" />
-          <img src="images/hinh1.jpg" alt="iPhone 15 Pro" loading="lazy" />
+          <source media="(max-width:734px)" srcSet={process.env.PUBLIC_URL + '/images/hinh1-mobile.jpeg'} />
+          <img src={process.env.PUBLIC_URL + '/images/hinh1.jpg'} alt="iPhone 15 Pro" loading="lazy" />
         </picture>
         <div className="hero-content">
           <h2>iPhone 15 Pro</h2>
@@ -63,8 +63,8 @@ function Home() {
       {/* ===== iPhone 15 ===== */}
       <section className="hero-section hero-iphone15">
         <picture>
-          <source media="(max-width: 734px)" srcSet="images/hinh2-mobile.jpeg" />
-          <img src="images/hinh2.jpeg" alt="iPhone 15" loading="lazy" />
+          <source media="(max-width:734px)" srcSet={process.env.PUBLIC_URL + '/images/hinh2-mobile.jpeg'} />
+          <img src={process.env.PUBLIC_URL + '/images/hinh2.jpeg'} alt="iPhone 15" loading="lazy" />
         </picture>
         <div className="hero-content">
           <h2>iPhone 15</h2>
@@ -81,8 +81,8 @@ function Home() {
       {/* ===== iPad Pro ===== */}
       <section className="hero-section hero-ipadpro">
         <picture>
-          <source media="(max-width: 734px)" srcSet="images/hinh6-mobile.jpeg" />
-          <img src="images/hinh6.jpg" alt="iPad Pro" loading="lazy" />
+          <source media="(max-width:734px)" srcSet={process.env.PUBLIC_URL + '/images/hinh6-mobile.jpeg'} />
+          <img src={process.env.PUBLIC_URL + '/images/hinh6.jpg'} alt="iPad Pro" loading="lazy" />
         </picture>
         <div className="hero-content">
           <h2>iPad Pro</h2>
@@ -100,7 +100,7 @@ function Home() {
       <Container fluid>
         <Row className="grid-section">
           <Col md={6} className="grid-item grid-airpods">
-            <img src="images/hinh3.jpg" alt="AirPods" loading="lazy" />
+            <img src={process.env.PUBLIC_URL + '/images/hinh3.jpg'} alt="AirPods" loading="lazy" />
             <div className="grid-content">
               <h2>AirPods</h2>
               <p>Âm Thanh Thích Ứng. Đang phát</p>
@@ -112,7 +112,7 @@ function Home() {
           </Col>
 
           <Col md={6} className="grid-item grid-macbook-air">
-            <img src="images/hinh3-ph.jpg" alt="MacBook Air" loading="lazy" />
+            <img src={process.env.PUBLIC_URL + '/images/hinh3-ph.jpg'} alt="MacBook Air" loading="lazy" />
             <div className="grid-content">
               <h2>MacBook Air</h2>
               <p>Cỗ máy M3. Gọn bâng. Cân mọi việc</p>
@@ -126,7 +126,7 @@ function Home() {
 
         <Row className="grid-section">
           <Col md={6} className="grid-item grid-watch-series">
-            <img src="images/tr-hinh4.jpg" alt="Apple Watch Series 9" loading="lazy" />
+            <img src={process.env.PUBLIC_URL + '/images/tr-hinh4.jpg'} alt="Apple Watch Series 9" loading="lazy" />
             <div className="grid-content">
               <h2>APPLE WATCH</h2>
               <h3>SERIES 9</h3>
@@ -139,7 +139,7 @@ function Home() {
           </Col>
 
           <Col md={6} className="grid-item grid-watch-ultra">
-            <img src="images/ph-hinh4.jpg" alt="Apple Watch Ultra 2" loading="lazy" />
+            <img src={process.env.PUBLIC_URL + '/images/ph-hinh4.jpg'} alt="Apple Watch Ultra 2" loading="lazy" />
             <div className="grid-content">
               <h2>APPLE WATCH</h2>
               <h3>ULTRA 2</h3>
@@ -154,13 +154,10 @@ function Home() {
 
         <Row className="grid-section">
           <Col md={6} className="grid-item grid-ipad-air">
-            <img src="images/tr-hinh5.jpg" alt="iPad Air" loading="lazy" />
+            <img src={process.env.PUBLIC_URL + '/images/tr-hinh5.jpg'} alt="iPad Air" loading="lazy" />
             <div className="grid-content">
               <h2>
-                iPad{' '}
-                <span style={{ fontFamily: "'Brush Script MT', cursive", color: '#bf5af2' }}>
-                  air
-                </span>
+                iPad <span style={{ fontFamily: "'Brush Script MT', cursive", color: '#bf5af2' }}>air</span>
               </h2>
               <p>Hai kích cỡ. Chip nhanh hơn. Đa zi năng</p>
               <div className="grid-buttons">
@@ -171,7 +168,7 @@ function Home() {
           </Col>
 
           <Col md={6} className="grid-item grid-macbook-pro">
-            <img src="images/ph-hinh5.jpg" alt="MacBook Pro" loading="lazy" />
+            <img src={process.env.PUBLIC_URL + '/images/ph-hinh5.jpg'} alt="MacBook Pro" loading="lazy" />
             <div className="grid-content">
               <h2>MacBook Pro</h2>
               <p>Chấn động. Ấn tượng</p>
@@ -194,8 +191,8 @@ function Home() {
             {[1, 2, 3, 4].map((num, i) => (
               <div className="item" key={i}>
                 <picture>
-                  <source media="(max-width: 734px)" srcSet={`images/sile${num}-mobe.jpeg`} />
-                  <img src={`images/slide-${num}.jpg`} alt={`Slide ${num}`} loading="lazy" />
+                  <source media="(max-width:1000px)" srcSet={process.env.PUBLIC_URL + `/images/sile${num}-mobe.jpeg`} />
+                  <img src={process.env.PUBLIC_URL + `/images/slide-${num}.jpg`} alt={`Slide ${num}`} loading="lazy" />
                 </picture>
                 <div className="slide-content">
                   <p>
