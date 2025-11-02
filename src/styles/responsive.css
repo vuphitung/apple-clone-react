@@ -182,18 +182,6 @@
         box-shadow: none !important;
     }
 
-    /* Tắt animation xuất hiện */
-    .hero-section,
-    .grid-item,
-    .hero-content,
-    .grid-content,
-    .slide-content {
-        animation: none !important;
-        transition: none !important;
-        transform: none !important;
-        opacity: 1 !important;
-    }
-
     .menu-bar {
         padding: 0 14px;
     }
@@ -281,8 +269,9 @@
     }
 
     .slide-content {
-        bottom: 5%;
-        transform: translateX(-50%) translateY(0);
+        bottom: 60px;
+        max-width: 100%;
+
     }
 
     .slide-content p {
@@ -331,6 +320,10 @@
 
 /* SMALL MOBILE (320px - 374px) */
 @media only screen and (max-width: 374px) {
+    .hero-section {
+        min-height: auto;
+    }
+
     .hero-content h2 {
         font-size: 32px;
     }
@@ -370,5 +363,6 @@
         width: 100%;
         max-width: 200px;
     }
+
 
 }

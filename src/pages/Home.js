@@ -5,8 +5,7 @@ function Home() {
   const [currentIndex, setCurrentIndex] = useState(0);
   const slideCount = 4;
   const interval = 4000;
-
-  // ✅ Slider logic (auto + stop memory leak)
+  
   useEffect(() => {
     const timer = setInterval(() => {
       setCurrentIndex((prev) => (prev + 1) % slideCount);
@@ -14,7 +13,6 @@ function Home() {
     return () => clearInterval(timer);
   }, []);
 
-  // ✅ Intersection Observer cho animation (chỉ animate 1 lần, nhẹ hơn)
   useEffect(() => {
     const observer = new IntersectionObserver(
       (entries, obs) => {
