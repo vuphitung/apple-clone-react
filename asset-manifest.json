@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/apple-clone-react/static/css/main.df4d57b8.css",
+    "main.css": "/apple-clone-react/static/css/main.d031e5a0.css",
     "main.js": "/apple-clone-react/static/js/main.3a61ddfc.js",
     "static/js/453.cbf1c3f6.chunk.js": "/apple-clone-react/static/js/453.cbf1c3f6.chunk.js",
     "index.html": "/apple-clone-react/index.html",
-    "main.df4d57b8.css.map": "/apple-clone-react/static/css/main.df4d57b8.css.map",
+    "main.d031e5a0.css.map": "/apple-clone-react/static/css/main.d031e5a0.css.map",
     "main.3a61ddfc.js.map": "/apple-clone-react/static/js/main.3a61ddfc.js.map",
     "453.cbf1c3f6.chunk.js.map": "/apple-clone-react/static/js/453.cbf1c3f6.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.df4d57b8.css",
+    "static/css/main.d031e5a0.css",
     "static/js/main.3a61ddfc.js"
   ]
 }
