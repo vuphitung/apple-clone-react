@@ -5,7 +5,7 @@ function Home() {
   const [currentIndex, setCurrentIndex] = useState(0);
   const slideCount = 4;
   const interval = 4000;
-  
+
   useEffect(() => {
     const timer = setInterval(() => {
       setCurrentIndex((prev) => (prev + 1) % slideCount);
@@ -168,7 +168,10 @@ function Home() {
           </Col>
 
           <Col md={6} className="grid-item grid-macbook-pro">
-            <img src={process.env.PUBLIC_URL + '/images/ph-hinh5.jpg'} alt="MacBook Pro" loading="lazy" />
+            <picture>
+              <source media="(max-width:734px)" srcSet={process.env.PUBLIC_URL + '/images/ph-hinh5-mobile.jpeg'} />
+              <img src={process.env.PUBLIC_URL + '/images/ph-hinh5.jpeg'} alt="MacBook Pro" loading="lazy" />
+            </picture>
             <div className="grid-content">
               <h2>MacBook Pro</h2>
               <p>Chấn động. Ấn tượng</p>
